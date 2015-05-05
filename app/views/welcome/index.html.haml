@@ -4,5 +4,13 @@
 %ul
   %li
     =link_to 'Edit books', books_path
+    |
+    =link_to 'Edit books', [:books]
   %li
     =link_to 'Edit espressos', admin_espressos_path
+    |
+    =link_to 'Edit espressos', [:admin, :espressos]
+  %li
+    =link_to 'Edit cats', cats_path
+    |
+    =link_to 'Edit cats', :cats
