@@ -2,7 +2,6 @@ class CatsController < ApplicationController
   before_action :set_cat, only: [:edit, :update, :destroy]
 
   # GET /cats
-  # GET /cats.json
   def index
     @cats = Animal::Cat.all
   end
@@ -17,43 +16,29 @@ class CatsController < ApplicationController
   end
 
   # POST /cats
-  # POST /cats.json
   def create
     @cat = Animal::Cat.new(cat_params)
 
-    respond_to do |format|
-      if @cat.save
-        format.html { redirect_to cats_url, notice: 'Cat was successfully created.' }
-        format.json { render :show, status: :created, location: @cat }
-      else
-        format.html { render :new }
-        format.json { render json: @cat.errors, status: :unprocessable_entity }
-      end
+    if @cat.save
+      redirect_to cats_url, notice: 'Cat was successfully created.'
+    else
+      render :new
     end
   end
 
   # PATCH/PUT /cats/1
-  # PATCH/PUT /cats/1.json
   def update
-    respond_to do |format|
-      if @cat.update(cat_params)
-        format.html { redirect_to cats_url, notice: 'Cat was successfully updated.' }
-        format.json { render :show, status: :ok, location: @cat }
-      else
-        format.html { render :edit }
-        format.json { render json: @cat.errors, status: :unprocessable_entity }
-      end
+    if @cat.update(cat_params)
+      redirect_to cats_url, notice: 'Cat was successfully updated.'
+    else
+      render :edit
     end
-  end
+end
 
   # DELETE /cats/1
-  # DELETE /cats/1.json
   def destroy
     @cat.destroy
-    respond_to do |format|
-      format.html { redirect_to cats_url, notice: 'Cat was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to cats_url, notice: 'Cat was successfully destroyed.'
   end
 
   private
