@@ -6,10 +6,10 @@
   %tbody
     - @espressos.each do |espresso|
       %tr
-        %td= link_to "#{espresso.title}", [:edit, :admin, espresso]
+        %td= link_to espresso.title, [:edit, :admin, espresso]
         %td
           (
-          = link_to "#{espresso.title}", edit_admin_espresso_path(espresso)
+          = link_to espresso.title, edit_admin_espresso_path(espresso)
           )
         %td= link_to 'Destroy', [:admin, espresso], :method => :delete, :data => { :confirm => 'Are you sure?' }
         %td
