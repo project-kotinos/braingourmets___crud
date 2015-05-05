@@ -1,0 +1,21 @@
+%h1 Editing dog
+
+-# We cannot use the shared partial here because for the NEW action, the URL
+-# needs to be "admin_dogs_path", while for the EDIT action, the URL needs to be admin_dog_path.
+-#= form_for @dog, url: dog_path, as: :dog do |f|
+= form_for @dog, url: admin_dog_path, as: :dog do |f|
+  - if @dog.errors.any?
+    #error_explanation
+    %h2= "#{ pluralize(@dog.errors.count, 'error') } prohibited this dog from being saved:"
+    %ul
+      - @dog.errors.full_messages.each do |msg|
+        %li= msg
+
+  %p
+    %label Title
+    =f.text_field :title
+
+  .actions
+    = f.submit 'Save'
+
+= link_to 'Back', admin_dogs_path

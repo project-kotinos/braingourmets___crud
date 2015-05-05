@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :books
 
   namespace :admin do
-    resources :espressos
+    resources :espressos, :dogs
   end
 
   resources :cats

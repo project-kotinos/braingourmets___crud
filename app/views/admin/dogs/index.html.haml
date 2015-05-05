@@ -1,0 +1,14 @@
+%h1 Listing dogs
+
+%p This is CRUD example where both the model as well as the controller are namespaced.
+
+%table
+  %tbody
+    - @dogs.each do |dog|
+      %tr
+        %td= link_to dog.title, edit_admin_dog_path(dog)
+        %td= link_to 'Destroy', admin_dog_path(dog), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%p= link_to 'New Dog', new_admin_dog_path
+
+%p= link_to 'Home', welcome_index_path
