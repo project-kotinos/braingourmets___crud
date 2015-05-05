@@ -28,7 +28,7 @@ class Admin::EspressosController < ApplicationController
 
     respond_to do |format|
       if @espresso.save
-        format.html { redirect_to admin_espressos_path, notice: 'Espresso was successfully created.' }
+        format.html { redirect_to admin_espressos_url, notice: 'Espresso was successfully created.' }
         format.json { render :show, status: :created, location: @espresso }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class Admin::EspressosController < ApplicationController
   def update
     respond_to do |format|
       if @espresso.update(espresso_params)
-        format.html { redirect_to admin_espressos_path, notice: 'Espresso was successfully updated.' }
+        format.html { redirect_to admin_espressos_url, notice: 'Espresso was successfully updated.' }
         format.json { render :show, status: :ok, location: @espresso }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class Admin::EspressosController < ApplicationController
   def destroy
     @espresso.destroy
     respond_to do |format|
-      format.html { redirect_to admin_espressos_path, notice: 'Espresso was successfully destroyed.' }
+      format.html { redirect_to admin_espressos_url, notice: 'Espresso was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
