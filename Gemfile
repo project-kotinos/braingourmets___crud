@@ -47,3 +47,6 @@ group :development, :test do
   gem 'binding_of_caller'
 end
 
+# Use Haml for HTML templates (http://haml.info)
+gem 'haml'
+gem 'haml-rails'
