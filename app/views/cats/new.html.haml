@@ -1,7 +1,5 @@
 %h1 New cat
 
--#= render 'form'
-
 -# We cannot use the shared partial here because for the NEW action, the URL
 -# needs to be "cats_path", while for the EDIT action, the URL needs to be cat_path.
 = form_for @cat, url: cats_path, as: :cat do |f|

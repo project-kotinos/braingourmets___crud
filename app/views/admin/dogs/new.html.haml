@@ -2,7 +2,6 @@
 
 -# We cannot use the shared partial here because for the NEW action, the URL
 -# needs to be "admin_dogs_path", while for the EDIT action, the URL needs to be admin_dog_path.
--#= form_for @dog, url: dog_path, as: :dog do |f|
 = form_for @dog, url: admin_dogs_path, as: :dog do |f|
   - if @dog.errors.any?
     #error_explanation
