@@ -1,0 +1,14 @@
+= form_for [:admin, @espresso] do |f|
+  - if @espresso.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@espresso.errors.count, "error")} prohibited this espresso from being saved:"
+      %ul
+        - @espresso.errors.full_messages.each do |msg|
+          %li= msg
+
+  %P
+    %label Title
+    =f.text_field :title
+
+  .actions
+    = f.submit 'Save'

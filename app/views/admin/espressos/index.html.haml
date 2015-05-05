@@ -1,0 +1,20 @@
+%h1 Listing espressos
+
+%table
+  %thead
+    %tr
+      %th
+      %th
+      %th
+
+  %tbody
+    - @espressos.each do |espresso|
+      %tr
+        %td= link_to "#{espresso.title}", edit_admin_espresso_path(espresso)
+        %td= link_to 'Destroy', admin_espresso_path(espresso), :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Espresso', new_admin_espresso_path
+
+%p= link_to 'Home', welcome_index_path
