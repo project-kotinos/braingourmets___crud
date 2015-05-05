@@ -1,15 +1,10 @@
 class Admin::EspressosController < ApplicationController
-  before_action :set_espresso, only: [:show, :edit, :update, :destroy]
+  before_action :set_espresso, only: [:edit, :update, :destroy]
 
   # GET /admin/espressos
   # GET /admin/espressos.json
   def index
     @espressos = Espresso.all
-  end
-
-  # GET /admin/espressos/1
-  # GET /admin/espressos/1.json
-  def show
   end
 
   # GET /admin/espressos/new

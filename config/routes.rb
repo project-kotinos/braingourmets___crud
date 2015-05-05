@@ -3,13 +3,13 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  resources :books
+  resources :books, :cats,
+            only: [:index, :create, :new, :edit, :update, :destroy]
 
   namespace :admin do
-    resources :espressos, :dogs
+    resources :espressos, :dogs,
+              only: [:index, :create, :new, :edit, :update, :destroy]
   end
-
-  resources :cats
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

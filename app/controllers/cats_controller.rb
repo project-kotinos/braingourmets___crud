@@ -1,15 +1,10 @@
 class CatsController < ApplicationController
-  before_action :set_cat, only: [:show, :edit, :update, :destroy]
+  before_action :set_cat, only: [:edit, :update, :destroy]
 
   # GET /cats
   # GET /cats.json
   def index
     @cats = Animal::Cat.all
-  end
-
-  # GET /cats/1
-  # GET /cats/1.json
-  def show
   end
 
   # GET /cats/new

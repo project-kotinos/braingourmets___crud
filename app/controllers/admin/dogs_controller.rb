@@ -1,15 +1,10 @@
 class Admin::DogsController < ApplicationController
-  before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :set_dog, only: [:edit, :update, :destroy]
 
   # GET /admin/dogs
   # GET /admin/dogs.json
   def index
     @dogs = Animal::Dog.all
-  end
-
-  # GET /admin/dogs/1
-  # GET /admin/dogs/1.json
-  def show
   end
 
   # GET /admin/dogs/new
