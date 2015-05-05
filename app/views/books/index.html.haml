@@ -1,6 +1,8 @@
 %h1 Listing books
 
-%p This is CRUD example where neither the model nor the controller are namespaced.
+%p
+  This is CRUD example where neither the model nor the controller are
+  namespaced.
 
 %table
   %tbody
@@ -9,9 +11,10 @@
         %td= link_to book.title, [:edit, book]
         %td
           (
-          =link_to book.title, edit_book_path(book)
+          = link_to book.title, edit_book_path(book)
           )
-        %td= link_to 'Destroy', book, :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', book, method: :delete,
+          data: { confirm: 'Are you sure?' }
 
 %p= link_to 'New Book', new_book_path
 

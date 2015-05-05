@@ -1,13 +1,16 @@
 %h1 Listing cats
 
-%p This is CRUD example where the model is namespaced, but the controller is not.
+%p
+  This is CRUD example where the model is namespaced, but the controller is
+  not.
 
 %table
   %tbody
     - @cats.each do |cat|
       %tr
         %td= link_to cat.title, edit_cat_path(cat)
-        %td= link_to 'Destroy', cat_path(cat), :method => :delete, :data => { :confirm => 'Are you sure?' }
+        %td= link_to 'Destroy', cat_path(cat), method: :delete,
+          data: { confirm: 'Are you sure?' }
 
 %p= link_to 'New Cat', new_cat_path
 

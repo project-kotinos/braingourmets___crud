@@ -1,18 +1,17 @@
 %h1 Editing cat
 
 -# We cannot use the shared partial here because for the NEW action, the URL
--# needs to be "cats_path", while for the EDIT action, the URL needs to be cat_path.
+  needs to be "cats_path", while for the EDIT action, the URL needs to be
+  cat_path.
 = form_for @cat, url: cat_path, as: :cat do |f|
   - if @cat.errors.any?
-    #error_explanation
-    %h2= "#{ pluralize(@cat.errors.count, 'error') } prohibited this cat from being saved:"
     %ul
       - @cat.errors.full_messages.each do |msg|
         %li= msg
 
   %p
     %label Title
-    =f.text_field :title
+    = f.text_field :title
 
   .actions
     = f.submit 'Save'

@@ -1,27 +1,29 @@
 %h1 Welcome!
 
-%p This demo application contains CRUD for all combinations of namespaced and non-namespaced controllers as well as namespaces and non-namespaced models.
+%p
+  This demo application contains CRUD for all combinations of namespaced and
+  non-namespaced controllers as well as namespaces and non-namespaced models.
 
 %p The paths should not contain the model namespaces, though.
 
 %ul
   %li
     Nothing namespaced:
-    =link_to 'Edit books', books_path
+    = link_to 'Edit books', books_path
     |
-    =link_to 'Edit books', [:books]
+    = link_to 'Edit books', [:books]
   %li
     Namespaced controller:
-    =link_to 'Edit espressos', admin_espressos_path
+    = link_to 'Edit espressos', admin_espressos_path
     |
-    =link_to 'Edit espressos', [:admin, :espressos]
+    = link_to 'Edit espressos', [:admin, :espressos]
   %li
     Namespaced model:
-    =link_to 'Edit cats', cats_path
+    = link_to 'Edit cats', cats_path
     |
-    =link_to 'Edit cats', :cats
+    = link_to 'Edit cats', :cats
   %li
     Namespaced model and controller:
-    =link_to 'Edit dogs', admin_dogs_path
+    = link_to 'Edit dogs', admin_dogs_path
     |
-    =link_to 'Edit dogs', [:admin, :dogs]
+    = link_to 'Edit dogs', [:admin, :dogs]
