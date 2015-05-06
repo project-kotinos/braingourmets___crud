@@ -1,5 +1,7 @@
 # CRUD demo
 
+[![Build Status](https://travis-ci.org/braingourmets/crud.svg?branch=master)](https://travis-ci.org/braingourmets/crud)
+
 This little Rails demo application shows CRUD forms for several configurations:
 
 * model not namespaced, controller not namespaced
