@@ -9,7 +9,8 @@ Rails.application.load_tasks
 task default: :test
 
 task test: [
-  :rubocop, :reek, :rails_best_practices
+  :rubocop, :reek, :rails_best_practices,
+  :haml_lint
 ]
 
 task :rubocop do
@@ -22,4 +23,8 @@ end
 
 task :rails_best_practices do
   sh 'rails_best_practices'
+end
+
+task :haml_lint do
+  sh 'haml-lint app/views/'
 end
