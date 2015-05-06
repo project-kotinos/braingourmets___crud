@@ -10,7 +10,7 @@ task default: :test
 
 task test: [
   :rubocop, :reek, :rails_best_practices,
-  :haml_lint
+  :haml_lint, :bundle_audit
 ]
 
 task :rubocop do

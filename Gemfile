@@ -52,4 +52,7 @@ group :test do
   gem 'reek'
   gem 'rails_best_practices'
   gem 'haml-lint'
+
+  # Security checker
+  gem 'bundler-audit'
 end
