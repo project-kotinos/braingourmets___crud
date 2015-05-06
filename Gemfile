@@ -49,4 +49,5 @@ end
 group :test do
   # Style checkers
   gem 'rubocop'
+  gem 'reek'
 end
