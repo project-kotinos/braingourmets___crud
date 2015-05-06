@@ -50,4 +50,5 @@ group :test do
   # Style checkers
   gem 'rubocop'
   gem 'reek'
+  gem 'rails_best_practices'
 end

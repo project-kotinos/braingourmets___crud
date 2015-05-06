@@ -9,7 +9,7 @@ Rails.application.load_tasks
 task default: :test
 
 task test: [
-  :rubocop, :reek
+  :rubocop, :reek, :rails_best_practices
 ]
 
 task :rubocop do
@@ -18,4 +18,8 @@ end
 
 task :reek do
   sh 'reek app/ db/seeds.rb Gemfile Rakefile'
+end
+
+task :rails_best_practices do
+  sh 'rails_best_practices'
 end
