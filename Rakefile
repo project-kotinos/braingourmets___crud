@@ -5,3 +5,13 @@
 require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
+
+task default: :test
+
+task test: [
+  :rubocop
+]
+
+task :rubocop do
+  sh 'rubocop --rails app/ db/seeds.rb Gemfile Rakefile'
+end

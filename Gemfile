@@ -45,3 +45,8 @@ group :development do
   # views.
   gem 'web-console'
 end
+
+group :test do
+  # Style checkers
+  gem 'rubocop'
+end
