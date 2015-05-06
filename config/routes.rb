@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  resources :books, :cats, except: [:show]
+  resources :books, except: [:show]
+  resources :cats, except: [:show]
 
   namespace :admin do
-    resources :espressos, :dogs, except: [:show]
+    resources :espressos, except: [:show]
+    resources :dogs, except: [:show]
   end
 end
