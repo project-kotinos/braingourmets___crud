@@ -48,11 +48,11 @@ end
 
 group :test do
   # Style checkers
-  gem 'rubocop'
-  gem 'reek'
-  gem 'rails_best_practices'
-  gem 'haml-lint'
+  gem 'rubocop', require: false
+  gem 'reek', require: false
+  gem 'rails_best_practices', require: false
+  gem 'haml-lint', require: false
 
   # Security checker
-  gem 'bundler-audit'
+  gem 'bundler-audit', require: false
 end
