@@ -18,4 +18,5 @@ before_script:
 
 script:
   - RAILS_ENV=test bin/rake --trace db:migrate test
+  - bundle exec rake assets:precompile RAILS_ENV=test
   - brakeman -z -4
