@@ -58,7 +58,6 @@ GEM
     bundler-audit (0.4.0)
       bundler (~> 1.2)
       thor (~> 0.18)
-    byebug (8.2.0)
     code_analyzer (0.4.5)
       sexp_processor
     codeclimate-engine-rb (0.1.0)
@@ -237,7 +236,6 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bundler-audit
-  byebug
   coffee-rails
   coffee-rails-source-maps
   haml
