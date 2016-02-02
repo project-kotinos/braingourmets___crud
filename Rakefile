@@ -18,7 +18,7 @@ task :rubocop do
 end
 
 task :reek do
-  sh 'reek app/ db/seeds.rb Gemfile Rakefile'
+  sh 'reek -c config/defaults.reek app/ db/seeds.rb Gemfile Rakefile'
 end
 
 task :rails_best_practices do
