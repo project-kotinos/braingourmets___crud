@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateEspressos < ActiveRecord::Migration
   def change
     create_table :espressos do |t|

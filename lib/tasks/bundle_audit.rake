@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 namespace :bundle_audit do
   ##
   # Loads bundler-audit. The require is within a method as it fails if the
