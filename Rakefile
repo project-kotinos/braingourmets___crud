@@ -8,11 +8,11 @@ require File.expand_path('../config/application', __FILE__)
 
 Rails.application.load_tasks
 
+Rake::Task['test'].clear
 task default: :test
 
 task test: [
-  :rubocop, :reek, :rails_best_practices,
-  :haml_lint, :bundle_audit
+  :rubocop, :reek, :rails_best_practices, :haml_lint, :bundle_audit
 ]
 
 task :rubocop do
