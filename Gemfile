@@ -3,10 +3,13 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '4.2.7.1'
+gem 'rails', '5.0.0.1'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
+
+# Use Puma as the app server
+gem 'puma'
 
 # Use Haml for HTML templates (http://haml.info)
 gem 'haml'
@@ -40,6 +43,9 @@ group :development do
   # Provide better error pages
   gem 'better_errors'
   gem 'binding_of_caller'
+  # Listen for file changes
+  gem 'listen'
+  gem 'spring-watcher-listen'
 end
 
 group :test do

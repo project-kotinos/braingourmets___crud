@@ -11,10 +11,12 @@ env:
   - DB=sqlite
 
 before_script:
-  - gem install brakeman
-  - bundle exec rake db:setup RAILS_ENV=test
+  - bundle exec rails version
+  - RAILS_ENV=test bundle exec rails db:migrate
+  - RAILS_ENV=test bundle exec rails db:migrate:status
 
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:migrate test
-  - bundle exec rake assets:precompile RAILS_ENV=test
-  - brakeman -z -4
+  - RAILS_ENV=test bundle exec rake --trace ci
+  - RAILS_ENV=test bundle exec rails assets:precompile
+  - gem install brakeman
+  - brakeman -z -5

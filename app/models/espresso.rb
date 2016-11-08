@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
 # an espresso flavor
-class Espresso < ActiveRecord::Base
+class Espresso < ApplicationRecord
   validates :title, presence: true
 end

@@ -20,7 +20,8 @@
 
 # Ignore all logfiles and tempfiles.
 /log/*.log
-/tmp
+/tmp/*
+!/tmp/.keep
 
 # Ignore common IDE files.
 *.idea
