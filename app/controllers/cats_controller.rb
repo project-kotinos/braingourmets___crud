@@ -15,8 +15,7 @@ class CatsController < ApplicationController
   end
 
   # GET /cats/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /cats
   def create

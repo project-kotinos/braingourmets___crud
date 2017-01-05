@@ -50,10 +50,10 @@ end
 
 group :test do
   # Style checkers
-  gem 'rubocop', require: false
-  gem 'reek', require: false
-  gem 'rails_best_practices', require: false
   gem 'haml_lint', require: false
+  gem 'rails_best_practices', require: false
+  gem 'reek', require: false
+  gem 'rubocop', require: false
 
   # Security checker
   gem 'bundler-audit', require: false

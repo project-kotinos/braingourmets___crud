@@ -16,8 +16,7 @@ module Admin
     end
 
     # GET /admin/espressos/1/edit
-    def edit
-    end
+    def edit; end
 
     # POST /admin/espressos
     def create
