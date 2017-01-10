@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CreateEspressos < ActiveRecord::Migration[4.2]
+class CreateEspressos < ActiveRecord::Migration[5.0]
   def change
     create_table :espressos do |t|
       t.string :title
