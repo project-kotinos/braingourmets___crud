@@ -49,15 +49,15 @@ module Admin
 
     private
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_espresso
-      @espresso = Espresso.find(params[:id])
-    end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_espresso
+        @espresso = Espresso.find(params[:id])
+      end
 
-    # Never trust parameters from the scary internet, only allow the whitelist
-    # through.
-    def espresso_params
-      params.require(:espresso).permit(:title)
-    end
+      # Never trust parameters from the scary internet, only allow the whitelist
+      # through.
+      def espresso_params
+        params.require(:espresso).permit(:title)
+      end
   end
 end

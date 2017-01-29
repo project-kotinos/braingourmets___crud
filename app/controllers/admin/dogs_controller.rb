@@ -49,15 +49,15 @@ module Admin
 
     private
 
-    # Use callbacks to share common setup or constraints between actions.
-    def set_dog
-      @dog = Animal::Dog.find(params[:id])
-    end
+      # Use callbacks to share common setup or constraints between actions.
+      def set_dog
+        @dog = Animal::Dog.find(params[:id])
+      end
 
-    # Never trust parameters from the scary internet, only allow the whitelist
-    # through.
-    def dog_params
-      params.require(:dog).permit(:title)
-    end
+      # Never trust parameters from the scary internet, only allow the whitelist
+      # through.
+      def dog_params
+        params.require(:dog).permit(:title)
+      end
   end
 end

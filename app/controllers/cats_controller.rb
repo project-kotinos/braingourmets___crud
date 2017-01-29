@@ -45,14 +45,14 @@ class CatsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_cat
-    @cat = Animal::Cat.find(params[:id])
-  end
+    # Use callbacks to share common setup or constraints between actions.
+    def set_cat
+      @cat = Animal::Cat.find(params[:id])
+    end
 
-  # Never trust parameters from the scary internet, only allow the whitelist
-  # through.
-  def cat_params
-    params.require(:cat).permit(:title)
-  end
+    # Never trust parameters from the scary internet, only allow the whitelist
+    # through.
+    def cat_params
+      params.require(:cat).permit(:title)
+    end
 end
