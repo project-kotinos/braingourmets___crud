@@ -2,7 +2,7 @@
 
 # cats CRUD
 class CatsController < ApplicationController
-  before_action :set_cat, only: [:edit, :update, :destroy]
+  before_action :set_cat, only: %i(edit update destroy)
 
   # GET /cats
   def index
