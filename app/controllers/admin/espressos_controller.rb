@@ -3,7 +3,7 @@
 module Admin
   # espresso CRUD
   class EspressosController < ApplicationController
-    before_action :set_espresso, only: %i(edit update destroy)
+    before_action :set_espresso, only: %i[edit update destroy]
 
     # GET /admin/espressos
     def index

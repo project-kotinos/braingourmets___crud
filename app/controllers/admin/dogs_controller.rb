@@ -3,7 +3,7 @@
 module Admin
   # dogs CRUD
   class DogsController < ApplicationController
-    before_action :set_dog, only: %i(edit update destroy)
+    before_action :set_dog, only: %i[edit update destroy]
 
     # GET /admin/dogs
     def index

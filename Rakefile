@@ -11,7 +11,7 @@ Rails.application.load_tasks
 Rake::Task['test'].clear
 task default: :ci
 
-task ci: %i(rubocop reek rails_best_practices haml_lint bundle_audit)
+task ci: %i[rubocop reek rails_best_practices haml_lint bundle_audit]
 
 task :rubocop do
   sh 'rubocop --rails app/ db/seeds.rb Gemfile Rakefile'
