@@ -16,7 +16,7 @@
     Namespaced controller:
     = link_to 'Edit espressos', admin_espressos_path
     |
-    = link_to 'Edit espressos', [:admin, :espressos]
+    = link_to 'Edit espressos', %i[admin espressos]
   %li
     Namespaced model:
     = link_to 'Edit cats', cats_path
@@ -26,4 +26,4 @@
     Namespaced model and controller:
     = link_to 'Edit dogs', admin_dogs_path
     |
-    = link_to 'Edit dogs', [:admin, :dogs]
+    = link_to 'Edit dogs', %i[admin dogs]
