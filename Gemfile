@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '5.0.5'
+gem 'rails', '5.1.3'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -22,7 +22,7 @@ gem 'sass-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier'
 
-# Use CoffeeScript for .js.coffee assets and views
+# Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails'
 
 # Use jquery as the JavaScript library

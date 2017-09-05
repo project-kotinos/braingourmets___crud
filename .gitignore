@@ -23,6 +23,9 @@
 /tmp/*
 !/tmp/.keep
 
+/node_modules
+/yarn-error.log
+
 # Ignore common IDE files.
 *.idea
 

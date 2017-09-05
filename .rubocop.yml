@@ -1,5 +1,5 @@
 AllCops:
   TargetRubyVersion: 2.4
-  TargetRailsVersion: 5.0
+  TargetRailsVersion: 5.1
 Layout/IndentationConsistency:
   EnforcedStyle: rails
