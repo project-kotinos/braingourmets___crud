@@ -5,7 +5,7 @@ language: ruby
 cache: bundler
 
 rvm:
-  - 2.4.1
+  - 2.4.2
 
 env:
   - DB=sqlite
