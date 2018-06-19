@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 
 # Rails
-gem 'rails', '5.1.6'
+gem 'rails', '5.2.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
@@ -30,6 +30,9 @@ gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster.
 gem 'turbolinks'
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', require: false
 
 group :development, :test do
   # Spring speeds up development by keeping your application running in the
