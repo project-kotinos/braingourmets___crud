@@ -57,6 +57,7 @@ group :test do
   gem 'rails_best_practices', require: false
   gem 'reek', require: false
   gem 'rubocop', require: false
+  gem 'rubocop-performance', require: false
 
   # Security checker
   gem 'bundler-audit', require: false
