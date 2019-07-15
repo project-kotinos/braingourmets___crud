@@ -14,7 +14,7 @@ task default: :ci
 task ci: %i[rubocop reek rails_best_practices haml_lint bundle_audit]
 
 task :rubocop do
-  sh 'rubocop --rails app/ db/seeds.rb Gemfile Rakefile'
+  sh 'rubocop app/ db/seeds.rb Gemfile Rakefile'
 end
 
 task :reek do

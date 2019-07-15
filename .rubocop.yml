@@ -2,6 +2,7 @@ AllCops:
   TargetRubyVersion: 2.6
   TargetRailsVersion: 5.2
 Layout/IndentationConsistency:
-  EnforcedStyle: rails
+  EnforcedStyle: indented_internal_methods
 require:
   - rubocop-performance
+  - rubocop-rails
